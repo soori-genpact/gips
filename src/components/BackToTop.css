@@ -10,5 +10,5 @@
 .back-to-top:hover {
   background: var(--accent); color: var(--bg);
   border-color: var(--accent);
-  box-shadow: 0 4px 20px rgba(201,165,92,0.3);
+  box-shadow: 0 4px 20px rgba(245,195,80,0.3);
 }

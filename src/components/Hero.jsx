@@ -59,7 +59,7 @@ export default function Hero() {
         const size = dist < maxDist ? 1 + (1 - dist / maxDist) * 2 : 0.8
         ctx.beginPath()
         ctx.arc(dot.x, dot.y, size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(201,165,92,${alpha})`
+        ctx.fillStyle = `rgba(245,195,80,${alpha})`
         ctx.fill()
       }
       animId = requestAnimationFrame(draw)
@@ -103,7 +103,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          The Intelligent Enterprise &middot; 2026
+          Genpact Insurance Policy Suite &middot; 2026
         </motion.div>
 
         <motion.h1
@@ -111,7 +111,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          Building the Future<br />on <em>ServiceNow</em>
+          AI-Powered Insurance<br /><em>Policy Suite</em>
         </motion.h1>
 
         <motion.p

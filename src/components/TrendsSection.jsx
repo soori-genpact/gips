@@ -1,12 +1,16 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { aiTrends } from '../data/content'
+import { NLPIcon, PredictiveIcon, GenAIIcon, ComputerVisionIcon, RAGIcon, AgenticIcon } from './Illustrations'
 import SectionHeader from './SectionHeader'
 import './TrendsSection.css'
+
+const trendIcons = [NLPIcon, PredictiveIcon, GenAIIcon, ComputerVisionIcon, RAGIcon, AgenticIcon]
 
 function TrendItem({ trend, index }) {
   const [ref, inView] = useInView()
   const isOdd = index % 2 === 0
+  const Icon = trendIcons[index]
 
   return (
     <motion.div
@@ -17,6 +21,7 @@ function TrendItem({ trend, index }) {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="trend-content">
+        <div className="trend-icon-wrap">{Icon && <Icon />}</div>
         <div className="trend-phase">{trend.phase}</div>
         <div className="trend-title">{trend.title}</div>
         <div className="trend-desc">{trend.desc}</div>

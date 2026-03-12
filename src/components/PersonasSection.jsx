@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { personas } from '../data/content'
+import personaSvgs from './PersonaIcons'
 import SectionHeader from './SectionHeader'
 import './PersonasSection.css'
 
 function PersonaCard({ persona, index }) {
   const [ref, inView] = useInView()
+  const SvgIcon = personaSvgs[persona.name]
   return (
     <motion.div
       ref={ref}
@@ -15,7 +17,7 @@ function PersonaCard({ persona, index }) {
       transition={{ delay: index * 0.07, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -3, boxShadow: '0 12px 40px rgba(0,0,0,0.25)' }}
     >
-      <div className="persona-icon">{persona.icon}</div>
+      <div className="persona-icon">{SvgIcon ? <SvgIcon /> : persona.icon}</div>
       <div className="persona-name">{persona.name}</div>
       <div className="persona-role">{persona.role}</div>
       <div className="persona-desc">{persona.desc}</div>

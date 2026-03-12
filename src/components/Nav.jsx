@@ -33,8 +33,8 @@ export default function Nav({ toggleTheme }) {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="nav-brand">
-          ServiceNow Intelligence
-          <span className="nav-brand-sub">Executive Briefing</span>
+          GIPS
+          <span className="nav-brand-sub">Genpact Insurance Policy Suite</span>
         </div>
 
         <ul className="nav-links">

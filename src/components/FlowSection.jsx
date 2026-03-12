@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { flowSteps } from '../data/content'
+import { EmailIntakeIcon, AIBrainIcon, RoutingIcon, WorkflowIcon, PolicyIcon } from './Illustrations'
 import SectionHeader from './SectionHeader'
 import './FlowSection.css'
 
+const stepIcons = [EmailIntakeIcon, AIBrainIcon, RoutingIcon, WorkflowIcon, PolicyIcon]
+
 function FlowStep({ step, index }) {
   const [ref, inView] = useInView()
+  const Icon = stepIcons[index] || null
+
   return (
     <motion.div
       ref={ref}
@@ -14,7 +19,14 @@ function FlowStep({ step, index }) {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="flow-step-num">{step.num}</div>
+      <div className="flow-step-left">
+        <div className="flow-step-num">{step.num}</div>
+        {Icon && (
+          <div className="flow-step-icon">
+            <Icon />
+          </div>
+        )}
+      </div>
       <div className="flow-step-content">
         <div className="flow-step-title">{step.title}</div>
         <div className="flow-step-desc">{step.desc}</div>

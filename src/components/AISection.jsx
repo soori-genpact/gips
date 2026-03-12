@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { aiCapabilities } from '../data/content'
+import { InterpretIcon, ClassifyIcon, ExtractIcon, TriggerIcon } from './Illustrations'
 import SectionHeader from './SectionHeader'
 import './AISection.css'
+
+const aiIcons = [InterpretIcon, ClassifyIcon, ExtractIcon, TriggerIcon]
 
 export default function AISection() {
   const [ref, inView] = useInView()
@@ -24,19 +27,22 @@ export default function AISection() {
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.7 }}
         >
-          {aiCapabilities.map((cap, i) => (
-            <motion.div
-              key={cap.title}
-              className="ai-card"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-            >
-              <div className="ai-card-icon">{cap.icon}</div>
-              <div className="ai-card-title">{cap.title}</div>
-              <div className="ai-card-text">{cap.text}</div>
-            </motion.div>
-          ))}
+          {aiCapabilities.map((cap, i) => {
+            const Icon = aiIcons[i]
+            return (
+              <motion.div
+                key={cap.title}
+                className="ai-card"
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+              >
+                <div className="ai-card-icon">{Icon ? <Icon /> : cap.icon}</div>
+                <div className="ai-card-title">{cap.title}</div>
+                <div className="ai-card-text">{cap.text}</div>
+              </motion.div>
+            )
+          })}
         </motion.div>
       </div>
     </section>

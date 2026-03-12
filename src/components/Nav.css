@@ -2,7 +2,7 @@
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.1rem 3rem;
-  background: rgba(10,10,15,0.6);
+  background: rgba(8,8,14,0.65);
   backdrop-filter: blur(24px) saturate(1.8);
   -webkit-backdrop-filter: blur(24px) saturate(1.8);
   border-bottom: 1px solid transparent;
@@ -10,21 +10,21 @@
 }
 .nav-scrolled {
   padding: 0.7rem 3rem;
-  background: rgba(10,10,15,0.92);
+  background: rgba(8,8,14,0.94);
   border-bottom-color: var(--border);
 }
-body.light .nav { background: rgba(250,249,246,0.7); }
-body.light .nav-scrolled { background: rgba(250,249,246,0.92); }
+body.light .nav { background: rgba(250,248,243,0.75); }
+body.light .nav-scrolled { background: rgba(250,248,243,0.94); }
 
 .nav-brand {
   font-family: var(--serif);
-  font-size: 1.05rem; font-weight: 600;
-  color: var(--accent); letter-spacing: 0.01em;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--accent); letter-spacing: 0.04em;
   white-space: nowrap;
 }
 .nav-brand-sub {
-  color: var(--text-muted); font-weight: 400;
-  font-family: var(--sans); font-size: 0.78rem;
+  color: var(--text-dim); font-weight: 400;
+  font-family: var(--sans); font-size: 0.72rem;
   margin-left: 0.8rem; letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -34,7 +34,7 @@ body.light .nav-scrolled { background: rgba(250,249,246,0.92); }
 }
 .nav-links a {
   color: var(--text-muted); font-size: 0.78rem;
-  font-weight: 400; letter-spacing: 0.08em;
+  font-weight: 500; letter-spacing: 0.08em;
   text-transform: uppercase; transition: color 0.3s;
   position: relative; padding-bottom: 2px;
 }
@@ -51,7 +51,7 @@ body.light .nav-scrolled { background: rgba(250,249,246,0.92); }
   background: none; border: 1px solid var(--border);
   color: var(--text-muted); padding: 0.4rem 0.9rem;
   border-radius: 4px; cursor: pointer; font-family: var(--sans);
-  font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
   transition: all 0.3s;
 }
 .nav-btn:hover { border-color: var(--accent); color: var(--accent); }
@@ -72,12 +72,12 @@ body.light .nav-scrolled { background: rgba(250,249,246,0.92); }
 
 .mobile-nav {
   position: fixed; inset: 0; z-index: 999;
-  background: rgba(10,10,15,0.97);
+  background: rgba(8,8,14,0.97);
   backdrop-filter: blur(30px);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 2rem;
 }
-body.light .mobile-nav { background: rgba(250,249,246,0.97); }
+body.light .mobile-nav { background: rgba(250,248,243,0.97); }
 .mobile-nav-link {
   font-family: var(--serif); font-size: 1.6rem;
   font-weight: 500; color: var(--text-dim);

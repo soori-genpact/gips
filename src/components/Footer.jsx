@@ -11,9 +11,9 @@ export default function Footer() {
     <footer>
       <div className="footer-inner">
         <div>
-          <div className="footer-brand-name">ServiceNow Intelligence Platform</div>
+          <div className="footer-brand-name">Genpact Insurance Policy Suite</div>
           <div className="footer-brand-desc">
-            The flexibility of custom software. The stability and power of a global enterprise platform. Built for the intelligent enterprise.
+            AI-powered insurance operations built on ServiceNow. From submission intake to policy issuance — intelligent automation at enterprise scale.
           </div>
         </div>
         <div>
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="footer-bottom-text">Executive Briefing &middot; The Intelligent Enterprise on ServiceNow &middot; 2026</div>
+        <div className="footer-bottom-text">GIPS &middot; Genpact Insurance Policy Suite &middot; 2026</div>
         <div className="footer-bottom-text">Confidential &amp; Proprietary</div>
       </div>
     </footer>

@@ -2,7 +2,7 @@
 .trends-timeline::before {
   content: ''; position: absolute;
   left: 50%; top: 0; bottom: 0; width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(92,138,201,0.3) 10%, rgba(92,138,201,0.3) 90%, transparent);
+  background: linear-gradient(to bottom, transparent, rgba(94,160,245,0.3) 10%, rgba(94,160,245,0.3) 90%, transparent);
   transform: translateX(-50%);
 }
 
@@ -21,8 +21,12 @@
   width: 12px; height: 12px; border-radius: 50%;
   background: var(--accent2); border: 2px solid var(--bg);
   transform: translateX(-50%); z-index: 2;
-  box-shadow: 0 0 12px rgba(92,138,201,0.3);
+  box-shadow: 0 0 12px rgba(94,160,245,0.3);
 }
+.trend-icon-wrap {
+  margin-bottom: 0.6rem; opacity: 0.85;
+}
+.trend-left .trend-icon-wrap { display: flex; justify-content: flex-end; }
 .trend-phase {
   font-family: var(--mono); font-size: 0.68rem;
   color: var(--accent2); letter-spacing: 0.1em; margin-bottom: 0.3rem;
@@ -32,7 +36,7 @@
   font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;
 }
 .trend-desc {
-  font-size: 0.85rem; color: var(--text-dim); font-weight: 300;
+  font-size: 0.85rem; color: var(--text-dim); font-weight: 400;
   line-height: 1.6; max-width: 380px;
 }
 .trend-left .trend-desc { margin-left: auto; }

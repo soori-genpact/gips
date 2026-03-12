@@ -212,7 +212,7 @@ export const workflowStages = [
     stage: 'Stage 01',
     code: 'genpact_b2b_clearance_case',
     title: 'Submission Clearance',
-    tasks: ['Document Upload & Registration', 'Document Translation', 'AI Data Extraction', 'Data Validation & Cleansing', 'Missing Data Capture', 'Duplicate Check (DUNS)', 'Data Cross-Verification', 'Quality Assurance Check'],
+    tasks: ['Document Upload & Registration', 'Translation & AI Data Extraction', 'Data Validation & Cleansing', 'Missing Data Capture', 'Duplicate Check (DUNS)', 'Quality Assurance Check'],
     status: 'Clearance Complete',
   },
   {
