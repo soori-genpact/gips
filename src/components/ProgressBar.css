@@ -1,0 +1,10 @@
+.progress-bar {
+  position: fixed; top: 0; left: 0; z-index: 9999;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent));
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+  transition: width 0.15s linear;
+  pointer-events: none;
+}
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }

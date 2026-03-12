@@ -1,0 +1,110 @@
+/* ═══════════════════════════════════════════════
+   ROOT & RESET
+   ═══════════════════════════════════════════════ */
+:root {
+  --bg: #0a0a0f;
+  --bg-deep: #060609;
+  --surface: #111118;
+  --surface2: #18181f;
+  --surface3: #1e1e28;
+  --border: rgba(255,255,255,0.06);
+  --border-hover: rgba(201,165,92,0.25);
+  --text: #e8e6e3;
+  --text-dim: #a0a0b0;
+  --text-muted: #6a6a7c;
+  --accent: #c9a55c;
+  --accent-light: #dfc07a;
+  --accent-glow: rgba(201,165,92,0.12);
+  --accent2: #5c8ac9;
+  --accent2-glow: rgba(92,138,201,0.12);
+  --success: #5cc98a;
+  --danger: #c95c6e;
+  --warning: #c9985c;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 80px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+::selection { background: rgba(201,165,92,0.3); color: #fff; }
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ═══════════════════════════════════════════════
+   LIGHT THEME
+   ═══════════════════════════════════════════════ */
+body.light {
+  --bg: #faf9f6;
+  --bg-deep: #f4f3f0;
+  --surface: #efeeeb;
+  --surface2: #e8e7e3;
+  --surface3: #dddcd8;
+  --border: rgba(0,0,0,0.08);
+  --border-hover: rgba(139,105,20,0.3);
+  --text: #1a1a1f;
+  --text-dim: #4a4a58;
+  --text-muted: #7a7a88;
+  --accent: #8b6914;
+  --accent-light: #a67e1a;
+  --accent-glow: rgba(139,105,20,0.08);
+  --accent2: #3a6baa;
+  --accent2-glow: rgba(58,107,170,0.08);
+}
+
+/* ═══════════════════════════════════════════════
+   SHARED SECTION STYLES
+   ═══════════════════════════════════════════════ */
+section { padding: 6.5rem 3rem; position: relative; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+  font-family: var(--mono); font-size: 0.66rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 0.8rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.section-label::before {
+  content: ''; width: 24px; height: 1px; background: var(--accent);
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 600; line-height: 1.15;
+}
+.section-desc {
+  font-size: 1rem; font-weight: 300; color: var(--text-dim);
+  line-height: 1.75; max-width: 600px; margin-top: 1rem;
+}
+.bg-surface { background: var(--surface); }
+.bg-deep { background: var(--bg-deep); }
+
+.section-divider {
+  width: 100%; max-width: 1200px; margin: 0 auto; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  section { padding: 4.5rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  section { padding: 3.5rem 1rem; }
+}

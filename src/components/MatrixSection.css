@@ -1,0 +1,42 @@
+.matrix-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.matrix-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 2.2rem; position: relative;
+  overflow: hidden; transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.matrix-card-accent {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--card-color, var(--accent));
+  opacity: 0; transition: opacity 0.4s;
+}
+.matrix-card:hover .matrix-card-accent { opacity: 1; }
+.matrix-card:hover { border-color: var(--border-hover); }
+.matrix-card-badge {
+  display: inline-block; font-family: var(--mono); font-size: 0.6rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.3rem 0.7rem; border-radius: 3px; margin-bottom: 1.2rem;
+  border: 1px solid;
+}
+.matrix-card-title {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.matrix-card-role {
+  font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.2rem; font-weight: 300;
+}
+.matrix-card-list { list-style: none; }
+.matrix-card-list li {
+  font-size: 0.85rem; color: var(--text-dim); font-weight: 300;
+  padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 0.7rem; line-height: 1.5;
+}
+.matrix-card-list li:last-child { border-bottom: none; }
+.matrix-dot {
+  width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0;
+}
+
+@media (max-width: 1024px) { .matrix-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .matrix-grid { grid-template-columns: 1fr; } }

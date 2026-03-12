@@ -1,0 +1,43 @@
+.flow-pipeline { position: relative; margin-top: 1rem; }
+.flow-pipeline::before {
+  content: ''; position: absolute;
+  left: 27px; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(201,165,92,0.3) 8%, rgba(201,165,92,0.3) 92%, transparent);
+}
+.flow-step {
+  display: flex; gap: 2.2rem; padding: 2rem 0; position: relative;
+}
+.flow-step-num {
+  width: 54px; height: 54px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1rem; font-weight: 600;
+  color: var(--accent);
+  border: 1px solid rgba(201,165,92,0.25); border-radius: 50%;
+  background: var(--bg); position: relative; z-index: 1;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.flow-step:hover .flow-step-num {
+  background: var(--accent-glow); border-color: var(--accent);
+  box-shadow: 0 0 24px rgba(201,165,92,0.15);
+}
+.flow-step-content { flex: 1; }
+.flow-step-title {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem;
+}
+.flow-step-desc {
+  color: var(--text-dim); font-weight: 300; line-height: 1.7; font-size: 0.92rem;
+}
+.flow-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }
+.flow-tag {
+  font-family: var(--mono); font-size: 0.65rem;
+  padding: 0.25rem 0.6rem; border: 1px solid var(--border);
+  border-radius: 2px; color: var(--text-muted); background: var(--surface);
+  letter-spacing: 0.02em; transition: all 0.3s;
+}
+.flow-step:hover .flow-tag { border-color: rgba(201,165,92,0.18); color: var(--text-dim); }
+
+@media (max-width: 768px) {
+  .flow-step { gap: 1rem; }
+  .flow-step-num { width: 42px; height: 42px; font-size: 0.85rem; }
+  .flow-pipeline::before { left: 20px; }
+}

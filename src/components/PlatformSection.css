@@ -1,0 +1,58 @@
+.platform-layers {
+  display: grid; grid-template-columns: 1fr; gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden;
+}
+.platform-layer {
+  background: var(--bg); padding: 1.8rem 2rem;
+  display: grid; grid-template-columns: 190px 1fr;
+  gap: 1.8rem; align-items: start; transition: background 0.3s;
+}
+.platform-layer:hover { background: var(--surface); }
+.platform-layer-name {
+  font-family: var(--serif); font-size: 1rem; font-weight: 600;
+  color: var(--accent); padding-top: 0.2rem;
+}
+.platform-layer-name small {
+  display: block; font-family: var(--mono); font-size: 0.6rem;
+  color: var(--text-muted); font-weight: 400;
+  letter-spacing: 0.08em; margin-top: 0.3rem; text-transform: uppercase;
+}
+.platform-caps { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.platform-cap {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.8rem; color: var(--text-dim);
+  padding: 0.4rem 0.8rem;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 4px; transition: all 0.3s; font-weight: 400;
+}
+.platform-cap:hover {
+  border-color: var(--border-hover); background: var(--accent-glow); color: var(--text);
+}
+
+.platform-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; margin-top: 2rem;
+  background: var(--border); border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden;
+}
+.platform-stat {
+  background: var(--bg); padding: 1.6rem; text-align: center;
+  transition: background 0.3s;
+}
+.platform-stat:hover { background: var(--surface); }
+.platform-stat-val {
+  font-family: var(--serif); font-size: 1.8rem; font-weight: 600; color: var(--accent2);
+}
+.platform-stat-label {
+  font-size: 0.7rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem;
+}
+
+@media (max-width: 1024px) {
+  .platform-layer { grid-template-columns: 150px 1fr; gap: 1rem; }
+}
+@media (max-width: 768px) {
+  .platform-layer { grid-template-columns: 1fr; gap: 0.6rem; }
+  .platform-stats { grid-template-columns: repeat(2, 1fr); }
+}

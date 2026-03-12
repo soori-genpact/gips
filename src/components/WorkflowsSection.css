@@ -1,0 +1,41 @@
+.wf-track {
+  display: flex; gap: 1.2rem; overflow-x: auto;
+  padding: 1rem 0 2rem; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.wf-track::-webkit-scrollbar { height: 3px; }
+.wf-track::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+.wf-card {
+  flex: 0 0 290px; scroll-snap-align: start;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.8rem;
+  transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.wf-card:hover { border-color: var(--border-hover); }
+.wf-card-stage {
+  font-family: var(--mono); font-size: 0.6rem;
+  color: var(--accent); letter-spacing: 0.12em;
+  text-transform: uppercase; margin-bottom: 0.8rem;
+}
+.wf-card-title {
+  font-family: var(--serif); font-size: 1.05rem;
+  font-weight: 600; margin-bottom: 0.8rem;
+}
+.wf-card-tasks { list-style: none; }
+.wf-card-tasks li {
+  font-size: 0.8rem; color: var(--text-dim); padding: 0.38rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 0.5rem; font-weight: 300;
+}
+.wf-card-tasks li:last-child { border-bottom: none; }
+.wf-card-tasks li::before { content: '\2192'; color: var(--accent); font-size: 0.7rem; flex-shrink: 0; }
+.wf-status {
+  margin-top: 1rem; font-family: var(--mono); font-size: 0.65rem;
+  color: var(--success); letter-spacing: 0.06em;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.wf-dot {
+  width: 6px; height: 6px; background: var(--success);
+  border-radius: 50%; animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
